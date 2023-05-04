@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import "./login.css";
+import "./register.css";
 
-function Login() {
+function Register() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -58,6 +58,21 @@ function Login() {
   const renderForm = (
     <div className="form">
       <form onSubmit={handleSubmit}>
+      <div className="input-container">
+          <label>First Name </label>
+          <input type="text" name="firstName" required />
+          {renderErrorMessage("uname")}
+        </div>
+        <div className="input-container">
+          <label>Last Name </label>
+          <input type="text" name="lastName" required />
+          {renderErrorMessage("uname")}
+        </div>
+        <div className="input-container">
+          <label>EMail </label>
+          <input type="email" name="email" required />
+          {renderErrorMessage("uname")}
+        </div>
         <div className="input-container">
           <label>Username </label>
           <input type="text" name="uname" required />
@@ -69,21 +84,20 @@ function Login() {
           {renderErrorMessage("pass")}
         </div>
         <div className="button-container">
-          <button type="submit">Sign in</button>     
-         </div>
+          <button type="submit" >Register</button>
+        </div>
       </form>
-      <div className="registerLink">New to Apta epay ? <a href="/register.html">Create an account</a></div>
     </div>
   );
 
   return (
     <div className="app">
-      <div className="login-form">
-        <div className="title">Sign In to APTA EPAY</div>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+      <div className="register-form">
+        <div className="title">Create account</div>
+        {isSubmitted ? <div>User is successfully registered </div> : renderForm}
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Register;
