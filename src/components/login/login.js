@@ -72,7 +72,7 @@ function Login() {
           <button type="submit">Sign in</button>     
          </div>
       </form>
-      <div className="registerLink">New to Apta epay ? <a href="/register.html">Create an account</a></div>
+      <div className="registerLink">New to Apta epay ? <a href="/register">Create an account</a></div>
     </div>
   );
 
