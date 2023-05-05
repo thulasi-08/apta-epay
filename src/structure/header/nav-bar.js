@@ -12,7 +12,7 @@ const Layout = () => {
           <Nav className="me-auto">
             <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="register">Registration</Nav.Link>
-            <Nav.Link href="/booking">Guest Booking</Nav.Link>
+            <Nav.Link href="/booking">Booking</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
