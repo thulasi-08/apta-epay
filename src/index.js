@@ -17,7 +17,7 @@ export default function App() {
           <Route index element={<Login />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route path="booking" element={<Booking />} />
+         // <Route path="booking" element={<Booking />} /> 
         </Routes>
       </div>
       <Footer />
