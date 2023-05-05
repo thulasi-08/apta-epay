@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import "./login.css";
+import "./booking.css";
 
-function Login() {
+function Booking() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -86,4 +86,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Booking;

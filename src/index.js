@@ -7,6 +7,7 @@ import Layout from "./structure/header/nav-bar";
 import Footer from "./structure/footer/footer";
 import Login from "./components/login/login";
 import Register from "./components/register/register";
+import Booking from "./components/booking/booking";
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
           <Route index element={<Login />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-         // <Route path="booking" element={<Booking />} /> 
+          <Route path="booking" element={<Booking />} /> 
         </Routes>
       </div>
       <Footer />
