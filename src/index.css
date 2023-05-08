@@ -8,10 +8,12 @@ body {
 
   /* hides the horizontal scroll bar */
 }
+
 .fixedHeight{
-  height: 750px;
+ 
   overflow:auto;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

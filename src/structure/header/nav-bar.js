@@ -13,6 +13,7 @@ const Layout = () => {
             <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="register">Registration</Nav.Link>
             <Nav.Link href="/booking">Booking</Nav.Link>
+            <Nav.Link href="/contact-us">Contact Us</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

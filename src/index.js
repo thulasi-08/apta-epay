@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './index.css';
 import Layout from "./structure/header/nav-bar";
@@ -8,6 +8,10 @@ import Footer from "./structure/footer/footer";
 import Login from "./components/login/login";
 import Register from "./components/register/register";
 import Booking from "./components/booking/booking";
+import Search from "./components/search/search";
+import ContactForm from './components/contact-us/contact-us';
+
+
 
 export default function App() {
   return (
@@ -19,8 +23,11 @@ export default function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="booking" element={<Booking />} /> 
+          <Route path="search" element={<Search />} /> 
+          <Route path="contact-us" element={<ContactForm />} /> 
         </Routes>
       </div>
+      <hr/>
       <Footer />
     </BrowserRouter>
   );
