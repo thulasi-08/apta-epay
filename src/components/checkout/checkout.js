@@ -90,11 +90,11 @@ function CheckOut() {
                                     </tr>
                                     <tr>
                                         <th>Departure Price</th>
-                                        <th>${departurePrice}</th>
+                                        <th>₹{departurePrice}</th>
                                     </tr>
                                     { traveltypeTwoway ? <tr>
                                         <th>Return Price</th>
-                                        <th>${retrunPrice}</th>
+                                        <th>₹{retrunPrice}</th>
                                     </tr> : ''}
                                 </thead>
 
@@ -107,20 +107,20 @@ function CheckOut() {
                             <div class="p-3" style={{ backgroundColor: "#eee" }}>
                                 <span class="fw-bold">Order Recap</span>
                                 <div class="d-flex justify-content-between mt-2">
-                                    <span>Departure Price</span> <span>${departurePrice}</span>
+                                    <span>Departure Price</span> <span>₹{departurePrice}</span>
                                 </div>
                                 { traveltypeTwoway ? <div class="d-flex justify-content-between mt-2">
-                                    <span>Return Price</span> <span>${retrunPrice}</span>
+                                    <span>Return Price</span> <span>₹{retrunPrice}</span>
                                 </div>:''}
                                 <hr />
                                 <div class="d-flex justify-content-between mt-2">
-                                    <span>Total </span> <span class="text-success">${totalPrice}(X {passengers})</span>
+                                    <span>Total </span> <span class="text-success">₹{totalPrice}(X {passengers})</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-7 col-lg-7 col-xl-6 mb-4 mb-md-0">
-                                <h3 class="mb-0 text-success"><strong>${finalPrice}.00</strong></h3>
+                                <h3 class="mb-0 text-success"><strong>₹{finalPrice}.00</strong></h3>
                                 <h5 class="mb-3">Ticket Total Price</h5>
                                 <div>
 

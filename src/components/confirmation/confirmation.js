@@ -84,11 +84,11 @@ function Confirmation() {
                                     </tr>
                                     <tr>
                                         <th>Departure Price</th>
-                                        <th>${departurePrice}</th>
+                                        <th>₹{departurePrice}</th>
                                     </tr>
                                     {traveltypeTwoway ? <tr>
                                         <th>Return Price</th>
-                                        <th>${retrunPrice}</th>
+                                        <th>₹{retrunPrice}</th>
                                     </tr> : ''}
                                 </thead>
 
@@ -99,7 +99,7 @@ function Confirmation() {
                         <div class="row">
                             <div class="col-md-7 col-lg-7 col-xl-6 mb-4 mb-md-0">
 
-                                <h5 class="mb-3">Ticket Total Price</h5><h3 class="mb-0 text-success"><strong>${finalPrice}.00</strong></h3>
+                                <h5 class="mb-3">Ticket Total Price</h5><h3 class="mb-0 text-success"><strong>₹{finalPrice}.00</strong></h3>
                             </div>
 
                         </div>
@@ -113,7 +113,7 @@ function Confirmation() {
                         size={size === '' ? 0 : size}
                     /></center>
                 </div>
-                <center style={{ padding: "30px", font: "20px" }}> <Link href="/booking"> Return to Home</Link>
+                <center style={{ padding: "30px", font: "20px" }}> <a href="/booking"> Return to Home</a>
                 </center>
             </div>
         </div>

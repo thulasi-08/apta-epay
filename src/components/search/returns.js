@@ -109,19 +109,19 @@ function constructHTMLSelection(data,number) {
                         <p>Economy</p>
                         <label className="radiobtn">
                             <input type="radio" name={radioName} value="economy" onClick={handleChange} defaultChecked data-price={data.OnlineFares.Economy.FareTotal} data-farekey={data.OnlineFares.EconomyExtra.FareKey} /> </label>
-                        <h5>${data.OnlineFares.Economy.FareTotal}</h5>
+                        <h5>₹{data.OnlineFares.Economy.FareTotal}</h5>
                     </div>
                     <div className="col-sm-2">
                         <p>EconomyExtra</p>
                         <label className="radiobtn">
                             <input type="radio" name={radioName} value="economy-extra" onClick={handleChange}  data-scheduleNumber="600089" data-price={data.OnlineFares.EconomyExtra.FareTotal}
                                 data-farekey={data.OnlineFares.EconomyExtra.FareKey} /></label>
-                        <h5>${data.OnlineFares.EconomyExtra.FareTotal}</h5>
+                        <h5>₹{data.OnlineFares.EconomyExtra.FareTotal}</h5>
                     </div>
                     <div className="col-sm-2">
                         <p>Flexible</p>
                         <label className="radiobtn"><input type="radio" name={radioName} onClick={handleChange} value="flex" data-price={data.OnlineFares.Flexible.FareTotal} data-farekey={data.OnlineFares.Flexible.FareKey} /></label>
-                        <h5>${data.OnlineFares.Flexible.FareTotal}</h5>
+                        <h5>₹{data.OnlineFares.Flexible.FareTotal}</h5>
 
                     </div>
                 </div>

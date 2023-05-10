@@ -37,21 +37,21 @@ var DataRoutes = {
                 "ScheduleNumber": "1342",
                 "TransferCount": 1,
                 "OnlineFares": {
-                    "LowestFare": 59.00,
+                    "LowestFare": 590.00,
                     "Economy": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzAfH05SHzE1MDgfNTkuMDAfMTM0Mh8xMi8xNS8yMDIyIDEyOjAxOjAwIEFNHzA4OjM0OjAwHzEARWNvbm9teQBvSGgvdGQrM2l2YWdaTCs3TEU3OHNRPT0=",
-                        "FareTotal": 59.00,
-                        "FareAverage": 59.00
+                        "FareTotal": 590.00,
+                        "FareAverage": 590.00
                     },
                     "EconomyExtra": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzEfH05SLFBCHzE1MDgfODMuMDAfMTM0Mh8xMi8xNS8yMDIyIDEyOjAxOjAwIEFNHzA4OjM0OjAwHzEARWNvbm9teUV4dHJhADh5S2VKcThWZmlJVzl2UWRJQUoyUGc9PQ==",
-                        "FareTotal": 83.00,
-                        "FareAverage": 83.00
+                        "FareTotal": 830.00,
+                        "FareAverage": 830.00
                     },
                     "Flexible": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzIfH1BCLEJBRx8xNTA4Hzk1LjAwHzEzNDIfMTIvMTUvMjAyMiAxMjowMTowMCBBTR8wODozNDowMB8xAEZsZXhpYmxlAHJCYVE2WVhNaWM5SStRdVo2TWQrK3c9PQ==",
-                        "FareTotal": 95.00,
-                        "FareAverage": 95.00
+                        "FareTotal": 950.00,
+                        "FareAverage": 950.00
                     }
                 },
                 "OfflineFares": {},
@@ -81,21 +81,21 @@ var DataRoutes = {
                 "ScheduleNumber": "2552",
                 "TransferCount": 0,
                 "OnlineFares": {
-                    "LowestFare": 56.00,
+                    "LowestFare": 560.00,
                     "Economy": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzEwMB8fTlIfMTUwOB81Ni4wMB8yNTUyHzEyLzE1LzIwMjIgNzowMDowMCBBTR8wNToyMDowMB8wAEVjb25vbXkAeFZTeTlYZUV2R2pTejA3RUVFQXlodz09",
-                        "FareTotal": 56.00,
-                        "FareAverage": 56.00
+                        "FareTotal": 560.00,
+                        "FareAverage": 560.00
                     },
                     "EconomyExtra": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzEwMR8fTlIsUEIfMTUwOB83OS4wMB8yNTUyHzEyLzE1LzIwMjIgNzowMDowMCBBTR8wNToyMDowMB8wAEVjb25vbXlFeHRyYQBuTFBoWVQwNnBleWVWM3VjdkkwRjFBPT0=",
-                        "FareTotal": 79.00,
-                        "FareAverage": 79.00
+                        "FareTotal": 790.00,
+                        "FareAverage": 790.00
                     },
                     "Flexible": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzEwMh8fUEIsQkFHHzE1MDgfOTAuMDAfMjU1Mh8xMi8xNS8yMDIyIDc6MDA6MDAgQU0fMDU6MjA6MDAfMABGbGV4aWJsZQBEcjVmZXRkWlZUbmJ5cVdsejdTZm1nPT0=",
-                        "FareTotal": 90.00,
-                        "FareAverage": 90.00
+                        "FareTotal": 900.00,
+                        "FareAverage": 900.00
                     }
                 },
                 "OfflineFares": {},
@@ -125,21 +125,21 @@ var DataRoutes = {
                 "ScheduleNumber": "7910",
                 "TransferCount": 1,
                 "OnlineFares": {
-                    "LowestFare": 64.00,
+                    "LowestFare": 640.00,
                     "Economy": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzIwMB8fTlIfMTUwOB82NC4wMB83OTEwHzEyLzE1LzIwMjIgMTE6MTA6MDAgQU0fMDc6MTU6MDAfMQBFY29ub215AHlpejdaS2dZMW05ZlA5cmd2a1JrTHc9PQ==",
-                        "FareTotal": 64.00,
-                        "FareAverage": 64.00
+                        "FareTotal": 640.00,
+                        "FareAverage": 640.00
                     },
                     "EconomyExtra": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzIwMR8fTlIsUEIfMTUwOB85MC4wMB83OTEwHzEyLzE1LzIwMjIgMTE6MTA6MDAgQU0fMDc6MTU6MDAfMQBFY29ub215RXh0cmEAdUF6VU5hS1l3SWJhMUJmbDFMcTc4Zz09",
-                        "FareTotal": 90.00,
-                        "FareAverage": 90.00
+                        "FareTotal": 900.00,
+                        "FareAverage": 900.00
                     },
                     "Flexible": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzIwMh8fUEIsQkFHHzE1MDgfMTAzLjAwHzc5MTAfMTIvMTUvMjAyMiAxMToxMDowMCBBTR8wNzoxNTowMB8xAEZsZXhpYmxlAEJua3A0VHpqRUo2M21MSGUzTjJsQ2c9PQ==",
-                        "FareTotal": 103.00,
-                        "FareAverage": 103.00
+                        "FareTotal": 1030.00,
+                        "FareAverage": 1030.00
                     }
                 },
                 "OfflineFares": {},
@@ -169,21 +169,21 @@ var DataRoutes = {
                 "ScheduleNumber": "2590",
                 "TransferCount": 0,
                 "OnlineFares": {
-                    "LowestFare": 65.00,
+                    "LowestFare": 650.00,
                     "Economy": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzMwMB8fTlIfMTUwOB82NS4wMB8yNTkwHzEyLzE1LzIwMjIgNTowMDowMCBQTR8wNToyMDowMB8wAEVjb25vbXkAWXdKU2pBTG1KRUhuWndEZUlrSzRodz09",
-                        "FareTotal": 65.00,
-                        "FareAverage": 65.00
+                        "FareTotal": 650.00,
+                        "FareAverage": 650.00
                     },
                     "EconomyExtra": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzMwMR8fTlIsUEIfMTUwOB85MS4wMB8yNTkwHzEyLzE1LzIwMjIgNTowMDowMCBQTR8wNToyMDowMB8wAEVjb25vbXlFeHRyYQB6NEpDMkxaVFVpOVM4QWpuVTBOYlBnPT0=",
-                        "FareTotal": 91.00,
-                        "FareAverage": 91.00
+                        "FareTotal": 910.00,
+                        "FareAverage": 910.00
                     },
                     "Flexible": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzMwMh8fUEIsQkFHHzE1MDgfMTA0LjAwHzI1OTAfMTIvMTUvMjAyMiA1OjAwOjAwIFBNHzA1OjIwOjAwHzAARmxleGlibGUAcU44d1RKK3JNM1VwdXBPM2FRVmJ1UT09",
-                        "FareTotal": 104.00,
-                        "FareAverage": 104.00
+                        "FareTotal": 1040.00,
+                        "FareAverage": 1040.00
                     }
                 },
                 "OfflineFares": {},
@@ -213,21 +213,21 @@ var DataRoutes = {
                 "ScheduleNumber": "1078",
                 "TransferCount": 1,
                 "OnlineFares": {
-                    "LowestFare": 57.00,
+                    "LowestFare": 570.00,
                     "Economy": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzQwMB8fTlIfMTUwOB81Ny4wMB8xMDc4HzEyLzE1LzIwMjIgNTowNTowMCBQTR8wNTozNTowMB8xAEVjb25vbXkASi9mWENsM0J1ZU03ZFlZaW1GcUViUT09",
-                        "FareTotal": 57.00,
-                        "FareAverage": 57.00
+                        "FareTotal": 570.00,
+                        "FareAverage": 570.00
                     },
                     "EconomyExtra": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzQwMR8fTlIsUEIfMTUwOB84MC4wMB8xMDc4HzEyLzE1LzIwMjIgNTowNTowMCBQTR8wNTozNTowMB8xAEVjb25vbXlFeHRyYQBiWlhuM3JFV0gxbWV6QTJXUHVMSWhnPT0=",
-                        "FareTotal": 80.00,
-                        "FareAverage": 80.00
+                        "FareTotal": 800.00,
+                        "FareAverage": 800.00
                     },
                     "Flexible": {
                         "FareKey": "Mzg0NzY3NTY3NjMzMTkyOTpTb2NrMR8qHzQwMh8fUEIsQkFHHzE1MDgfOTIuMDAfMTA3OB8xMi8xNS8yMDIyIDU6MDU6MDAgUE0fMDU6MzU6MDAfMQBGbGV4aWJsZQArR0pheFY1WEZOUTR2OHVqMmFwb3ZRPT0=",
-                        "FareTotal": 92.00,
-                        "FareAverage": 92.00
+                        "FareTotal": 920.00,
+                        "FareAverage": 920.00
                     }
                 },
                 "OfflineFares": {},
@@ -248,31 +248,31 @@ var DataRoutes = {
         "Calendar": [
             {
                 "Date": "2022-12-12",
-                "AveragePrice": 49.00
+                "AveragePrice": 490.00
             },
             {
                 "Date": "2022-12-13",
-                "AveragePrice": 49.00
+                "AveragePrice": 490.00
             },
             {
                 "Date": "2022-12-14",
-                "AveragePrice": 49.00
+                "AveragePrice": 490.00
             },
             {
                 "Date": "2022-12-15",
-                "AveragePrice": 56.00
+                "AveragePrice": 560.00
             },
             {
                 "Date": "2022-12-16",
-                "AveragePrice": 62.00
+                "AveragePrice": 620.00
             },
             {
                 "Date": "2022-12-17",
-                "AveragePrice": 57.00
+                "AveragePrice": 570.00
             },
             {
                 "Date": "2022-12-18",
-                "AveragePrice": 62.00
+                "AveragePrice": 620.00
             }
         ]
     }
