@@ -11,19 +11,43 @@ var traveltypeOneway = userParams.traveltype === 'oneway' ? true : false,
     startDate = userParams.startDate,
     returnDate = userParams.returnDate,
     adults = userParams.adults,
-    children = userParams.children;
+    children = userParams.children,
+    passengers = parseInt(userParams.adults)+ parseInt(userParams.children);
+  
 
-var paymentInfo = JSON.parse(sessionStorage.getItem("paymentInfo")),
-    departurePrice = parseInt(paymentInfo.departure[0].price),
-    retrunPrice;
-if (paymentInfo.return) {
-    retrunPrice = parseInt(paymentInfo.return[0].price)
+var paymentInfo = JSON.parse(sessionStorage.getItem("paymentInfo"));
+var departurePrice;
+var retrunPrice;
+var totalPrice;
+if (paymentInfo) {
+    if (paymentInfo.departure) {
+        departurePrice = parseInt(paymentInfo.departure[0].price)
+    }
+
+
+    if (paymentInfo.return) {
+        retrunPrice = parseInt(paymentInfo.return[0].price)
+    }
+    if(traveltypeTwoway){
+        totalPrice = parseInt(departurePrice + retrunPrice);
+    }else{
+        totalPrice = parseInt(departurePrice);
+    }
+    
 }
-var totalPrice = departurePrice + retrunPrice;
+
+var finalPrice = finalTotalPrice();
+
+function finalTotalPrice(){
+
+    return parseInt(totalPrice) * passengers;
+
+}
+
 
 function continueButton(e) {
 
-    redirectToPage("/confirmation?q=discob&oq=discob&aqs=69i57j0i10i512j0i131i433i512j0i131i433i650j46i10i199i340i465i512j0i512l4j0i10i512.4071j0j7&sourceid=chrome&ie=UTF-8", userParams);
+    redirectToPage("/confirmation", userParams);
 }
 
 function redirectToPage(link, data) {
@@ -56,10 +80,10 @@ function CheckOut() {
                                         <th>Start Date</th>
                                         <th>{startDate}</th>
                                     </tr>
-                                    <tr>
+                                    { traveltypeTwoway ?<tr>
                                         <th>Return</th>
                                         <th>{returnDate}</th>
-                                    </tr>
+                                    </tr> : ''}
                                     <tr>
                                         <th>Passengers</th>
                                         <th>{adults} Adult(s) and {children} Children(s) </th>
@@ -68,10 +92,10 @@ function CheckOut() {
                                         <th>Departure Price</th>
                                         <th>${departurePrice}</th>
                                     </tr>
-                                    <tr>
-                                        <th>Arrival Price</th>
+                                    { traveltypeTwoway ? <tr>
+                                        <th>Return Price</th>
                                         <th>${retrunPrice}</th>
-                                    </tr>
+                                    </tr> : ''}
                                 </thead>
 
                             </Table>
@@ -85,18 +109,18 @@ function CheckOut() {
                                 <div class="d-flex justify-content-between mt-2">
                                     <span>Departure Price</span> <span>${departurePrice}</span>
                                 </div>
-                                <div class="d-flex justify-content-between mt-2">
+                                { traveltypeTwoway ? <div class="d-flex justify-content-between mt-2">
                                     <span>Return Price</span> <span>${retrunPrice}</span>
-                                </div>
+                                </div>:''}
                                 <hr />
                                 <div class="d-flex justify-content-between mt-2">
-                                    <span>Total </span> <span class="text-success">${totalPrice}</span>
+                                    <span>Total </span> <span class="text-success">${totalPrice}(X {passengers})</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-7 col-lg-7 col-xl-6 mb-4 mb-md-0">
-                                <h5 class="mb-0 text-success">${totalPrice}</h5>
+                                <h3 class="mb-0 text-success"><strong>${finalPrice}.00</strong></h3>
                                 <h5 class="mb-3">Ticket Total Price</h5>
                                 <div>
 

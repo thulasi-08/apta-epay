@@ -52,9 +52,6 @@ function getDepartureDate() {
   console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript timestamp (ms)
 }
 
-function getReturnDate() {
-
-}
 
 function getTotalPassengers() {
   console.log("22XX");
@@ -79,21 +76,37 @@ function onBookingFromSubmit() {
 }
 
 
+function getReturnDate() {
+
+}
+
 
 function BookingForm() {
 
+  const [isRoundTripChecked, setIsRoundTripChecked] = useState(true);
+
+  
   var curr = new Date();
   curr.setDate(curr.getDate());
   var dateDefaultValue = curr.toISOString().substring(0, 10);
 
+  function setOneWayInfo(e){
+    setIsRoundTripChecked(false);
+
+  }
+  function setRoundTripInfo(e){
+
+    setIsRoundTripChecked(true);
+  }
+
   return (
     <form action="/book-departure">
       <div className="form-check form-check-inline mb-3">
-        <input className="form-check-input" type="radio" name="traveltype" id="inlineRadio1" value="oneway" defaultChecked />
+        <input className="form-check-input" required onChange={setOneWayInfo} type="radio" name="traveltype" id="inlineRadio1" value="oneway" />
         <label className="form-check-label" htmlFor="inlineRadio1">One Way</label>
       </div>
       <div className="form-check form-check-inline mb-3">
-        <input className="form-check-input" type="radio" name="traveltype" id="inlineRadio2" value="twoway" />
+        <input className="form-check-input" required onChange={setRoundTripInfo}  type="radio" name="traveltype" id="inlineRadio2" value="twoway" />
         <label className="form-check-label" htmlFor="inlineRadio2">Round Trip</label>
       </div>
       <div className="row">
@@ -117,12 +130,12 @@ function BookingForm() {
             <input id="startDate" onChange={getDepartureDate} name="startDate" required className="form-control-lg mb-2" type="date" defaultValue={dateDefaultValue} />
           </div>
         </div>
-        <div className="col col-xs-4 col-lg-3 mb-3">
+        {isRoundTripChecked ?  <div className="col col-xs-4 col-lg-3 mb-3">
           <div className="d-flex flex-column">
             <label htmlFor="returnDate" className="form-label">Return</label>
             <input id="returnDate" onChange={getReturnDate} name="returnDate" required className="form-control-lg mb-2" type="date" defaultValue={dateDefaultValue} />
           </div>
-        </div>
+        </div> : <br></br>}
       </div>
       <div className="row">
         <div className="col col-xs-4 col-lg-3">
@@ -165,6 +178,8 @@ function HeroImage() {
 function Booking() {
   // React States
   //getTotalPassengers();
+  sessionStorage.clear();
+
   return (
     <div>
       <HeroImage />

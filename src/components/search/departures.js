@@ -57,9 +57,11 @@ function continueButton(e) {
     }
 
     sessionStorage.setItem("userParams", JSON.stringify(userParams));
-
-    redirectToPage("/book-return", userParams);
-
+    if(traveltypeOneway){
+    redirectToPage("/pay-direct/tranfertypee/BOFEAMeDICVIS/KLIKJJeikm2390-02PLrs_erer", userParams);
+    }else{
+        redirectToPage("/book-return", userParams);
+    }
 
 }
 
