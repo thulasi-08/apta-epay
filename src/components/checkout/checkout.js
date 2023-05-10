@@ -1,8 +1,34 @@
 import Table from 'react-bootstrap/Table';
 import Card from 'react-bootstrap/Card';
 
-function spinner() {
+const urlSearchParams = new URLSearchParams(window.location.search);
+const userParams = Object.fromEntries(urlSearchParams.entries());
 
+var traveltypeOneway = userParams.traveltype === 'oneway' ? true : false,
+    traveltypeTwoway = userParams.traveltype === 'oneway' ? false : true,
+    fromLocation = userParams.fromLocation ? userParams.fromLocation.split(",")[0] : '',
+    toLocation = userParams.toLocation ? userParams.toLocation.split(",")[0] : '',
+    startDate = userParams.startDate,
+    returnDate = userParams.returnDate,
+    adults = userParams.adults,
+    children = userParams.children;
+
+var paymentInfo = JSON.parse(sessionStorage.getItem("paymentInfo")),
+    departurePrice = parseInt(paymentInfo.departure[0].price),
+    retrunPrice;
+if (paymentInfo.return) {
+    retrunPrice = parseInt(paymentInfo.return[0].price)
+}
+var totalPrice = departurePrice + retrunPrice;
+
+function continueButton(e) {
+
+    redirectToPage("/confirmation?q=discob&oq=discob&aqs=69i57j0i10i512j0i131i433i512j0i131i433i650j46i10i199i340i465i512j0i512l4j0i10i512.4071j0j7&sourceid=chrome&ie=UTF-8", userParams);
+}
+
+function redirectToPage(link, data) {
+    const params = new URLSearchParams(data);
+    window.location = link + "?" + params;
 }
 
 function CheckOut() {
@@ -19,43 +45,59 @@ function CheckOut() {
                             <Table striped>
                                 <thead>
                                     <tr>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
+                                        <th>Deaparture Location</th>
+                                        <th>{fromLocation}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Arrival Location</th>
+                                        <th>{toLocation}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Start Date</th>
+                                        <th>{startDate}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Return</th>
+                                        <th>{returnDate}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Passengers</th>
+                                        <th>{adults} Adult(s) and {children} Children(s) </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Departure Price</th>
+                                        <th>${departurePrice}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Arrival Price</th>
+                                        <th>${retrunPrice}</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <td colSpan={2}>Larry the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
-                                </tbody>
+
                             </Table>
                         </Card.Body>
                     </Card>
                     <section style={{ paddingTop: "50px" }}>
-                        <div class="d-flex justify-content-between align-items-center mb-5">
-                            <div class="d-flex flex-row align-items-center">
-                                <h4 class="text-uppercase mt-1">Eligible</h4>
-                                <span class="ms-2 me-3">Pay</span>
-                            </div>
-                            <a href="#!">Cancel and return to the website</a>
-                        </div>
 
+                        <div class="col-md-5 col-lg-4 col-xl-4 offset-lg-1 offset-xl-2">
+                            <div class="p-3" style={{ backgroundColor: "#eee" }}>
+                                <span class="fw-bold">Order Recap</span>
+                                <div class="d-flex justify-content-between mt-2">
+                                    <span>Departure Price</span> <span>${departurePrice}</span>
+                                </div>
+                                <div class="d-flex justify-content-between mt-2">
+                                    <span>Return Price</span> <span>${retrunPrice}</span>
+                                </div>
+                                <hr />
+                                <div class="d-flex justify-content-between mt-2">
+                                    <span>Total </span> <span class="text-success">${totalPrice}</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-7 col-lg-7 col-xl-6 mb-4 mb-md-0">
-                                <h5 class="mb-0 text-success">$85.00</h5>
-                                <h5 class="mb-3">Diabites Pump & Supplies</h5>
+                                <h5 class="mb-0 text-success">${totalPrice}</h5>
+                                <h5 class="mb-3">Ticket Total Price</h5>
                                 <div>
 
 
@@ -91,58 +133,10 @@ function CheckOut() {
                                             </label>
                                         </div>
                                     </div>
-                                    
-                                    <div class="d-flex justify-content-center">
-                                        <div class="spinner-border" role="status">
-                                            <span class="visually-hidden">Loading...</span>
-                                        </div>
-                                    </div>
-                                    <div class="btn btn-success btn-lg btn-block">Proceed to payment</div>
+                                    <div class="btn btn-success btn-lg btn-block" onClick={continueButton}>Proceed to payment</div>
                                 </div>
                             </div>
-                            <div class="col-md-5 col-lg-4 col-xl-4 offset-lg-1 offset-xl-2">
-                                <div class="p-3" style={{ backgroundColor: "#eee" }}>
-                                    <span class="fw-bold">Order Recap</span>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <span>contracted Price</span> <span>$186.86</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <span>Amount Deductible</span> <span>$0.0</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <span>Coinsurance(0%)</span> <span>+ $0.0</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <span>Copayment </span> <span>+ 40.00</span>
-                                    </div>
-                                    <hr />
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <span class="lh-sm"
-                                        >Total Deductible,<br />
-                                            Coinsurance and copay
-                                        </span>
-                                        <span>$40.00</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <span class="lh-sm"
-                                        >Maximum out-of-pocket <br />
-                                            on insurance policy</span
-                                        >
-                                        <span>$40.00</span>
-                                    </div>
-                                    <hr />
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <span>Insurance Responsibility </span> <span>$71.76</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <span>Patient Balance </span> <span>$13.24</span>
-                                    </div>
-                                    <hr />
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <span>Total </span> <span class="text-success">$85.00</span>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </section>
 

@@ -87,7 +87,7 @@ function BookingForm() {
   var dateDefaultValue = curr.toISOString().substring(0, 10);
 
   return (
-    <form action="/search">
+    <form action="/book-departure">
       <div className="form-check form-check-inline mb-3">
         <input className="form-check-input" type="radio" name="traveltype" id="inlineRadio1" value="oneway" defaultChecked />
         <label className="form-check-label" htmlFor="inlineRadio1">One Way</label>
@@ -100,13 +100,13 @@ function BookingForm() {
         <div className="col col-xs-4 col-lg-3 mb-3">
           <div className="d-flex flex-column">
             <label htmlFor="fromLocation" className="form-label">From</label>
-            <input id="fromLocation" onFocus={onFocusFromLocMapInit} name="fromLocation" type="text" required className="form-control-lg mb-2" placeholder="eg: Mumbai" aria-label="From location" />
+            <input id="fromLocation" onFocus={onFocusFromLocMapInit} name="fromLocation" type="text" required className="form-control-lg mb-2" placeholder="Leaving from" aria-label="From location" />
           </div>
         </div>
         <div className="col col-xs-4 col-lg-3 mb-3">
           <div className="d-flex flex-column">
             <label htmlFor="toLocation" className="form-label">To</label>
-            <input id="toLocation" onFocus={onFocusToLocMapInit} name= "toLocation" type="text" required className="form-control-lg mb-2" placeholder="eg: Hyderabad" aria-label="to destination" />
+            <input id="toLocation" onFocus={onFocusToLocMapInit} name= "toLocation" type="text" required className="form-control-lg mb-2" placeholder="Going to" aria-label="to destination" />
           </div>
         </div>
       </div>

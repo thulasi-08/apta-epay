@@ -7,12 +7,11 @@ import Layout from "./structure/header/nav-bar";
 import Footer from "./structure/footer/footer";
 import Login from "./components/login/login";
 import Register from "./components/register/register";
-import Booking from "./components/booking/booking";
+import Booking from "./components/booking-form/booking";
 import Departures from "./components/search/departures";
 import Returns from "./components/search/returns";
-import ContactForm from './components/contact-us/contact-us';
 import CheckOut from './components/checkout/checkout';
-
+import Confirmation from './components/confirmation/confirmation';
 
 
 export default function App() {
@@ -21,14 +20,15 @@ export default function App() {
       <Layout />
       <div className='fixedHeight'>
         <Routes>
-          <Route index element={<Login />} />
+          <Route index element={<Booking />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="booking" element={<Booking />} /> 
           <Route path="book-departure" element={<Departures />} /> 
           <Route path="book-return" element={<Returns />} /> 
-          <Route path="contact-us" element={<ContactForm />} /> 
           <Route path="pay-direct/tranfertypee/BOFEAMeDICVIS/KLIKJJeikm2390-02PLrs_erer" element={<CheckOut />} /> 
+          <Route path="confirmation" element={<Confirmation />} /> 
+
         </Routes>
       </div>
       <hr/>
