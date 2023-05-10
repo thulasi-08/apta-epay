@@ -9,10 +9,7 @@ body {
   /* hides the horizontal scroll bar */
 }
 
-.fixedHeight{
- 
-  overflow:auto;
-}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
